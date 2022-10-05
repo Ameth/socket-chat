@@ -6,12 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chat.css">
     <title>Webchat socket</title>
 </head>
 
 <body>
 
     <header>WebChat</header>
+
+    <main>
+        <div id="all-messages">
+        </div>
+        <div class="send-message">
+            <input type="text" name="message" id="message">
+            <button type="button" class="btn secondary" id="send-message">Enviar</button>
+        </div>
+    </main>
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="/js/script.js"></script>
