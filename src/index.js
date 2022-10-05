@@ -1,6 +1,7 @@
 const express = require("express");
 const { createServer } = require("http");
 const path = require("path");
+const cookieParser = require("cookie-parser");
 const realTimeServer = require("./realTimeServer.js");
 
 const app = express();
@@ -9,6 +10,7 @@ const httpServer = createServer(app);
 // Configuraciones
 app.set("port", process.env.PORT || 3000);
 app.set("views", path.join(__dirname, "views"));
+app.use(cookieParser());
 
 // Rutas
 app.use(require("./routes"));
